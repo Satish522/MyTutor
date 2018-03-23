@@ -16,5 +16,5 @@ public interface UserRoleDAO {
 	
 	public List<UserRoleBO> findAll();
 	
-	public UserRoleBO findById();
+	public UserRoleBO findById(int id);
 }

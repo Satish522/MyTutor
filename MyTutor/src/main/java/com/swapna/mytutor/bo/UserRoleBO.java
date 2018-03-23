@@ -1,6 +1,7 @@
 package com.swapna.mytutor.bo;
 
 public class UserRoleBO {
+	
 	private int roleId;
 	private String roleName;
 	private String privilege;
@@ -22,6 +23,10 @@ public class UserRoleBO {
 	}
 	public void setPrivilege(String privilege) {
 		this.privilege = privilege;
+	}
+	@Override
+	public String toString() {
+		return "UserRoleBO [roleId=" + roleId + ", roleName=" + roleName + ", privilege=" + privilege + "]";
 	}
 	
 	
