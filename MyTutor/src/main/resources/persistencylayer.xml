@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="org.postgresql.Driver"></property>
+<property name="url" value="jdbc:postgresql://localhost:5432/mytutor"></property>
+<property name="username" value="postgres"></property>
+<property name="password" value="admin"></property>
+</bean>
+
+
+<bean id="jdbcTemplet" class="org.springframework.jdbc.core.JdbcTemplate">
+<constructor-arg ref="datasource"></constructor-arg>
+</bean>
+
+
+<bean id="classesForTrainingDaoImpl" class="com.swapna.mytutor.dao.impl.ClassesForTrainingDaoImpl">
+	<constructor-arg ref="jdbcTemplet"></constructor-arg>
+</bean>
+
+<bean id="coachingTypeDaoImpl" class="com.swapna.mytutor.dao.impl.CoachingTypeDaoImpl">
+	<constructor-arg ref="jdbcTemplet"></constructor-arg>
+</bean>
+
+<bean id="studyPattern" class="com.swapna.mytutor.dao.impl.StudyPatternDaoImpl">
+	<constructor-arg ref="jdbcTemplet"></constructor-arg>
+</bean>
+
+<bean id="subjectForClassDaoImpl" class="com.swapna.mytutor.dao.impl.SubjectForClassDaoImpl">
+	<constructor-arg ref="jdbcTemplet"></constructor-arg>
+</bean>
+
+<bean id="userRole" class="com.swapna.mytutor.dao.impl.UserRoleDaoQueryBased">
+	<constructor-arg ref="jdbcTemplet"></constructor-arg>
+</bean>
+
+</beans>
