@@ -8,13 +8,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.swapna.mytutor.bo.UserRoleBO;
 import com.swapna.mytutor.dao.impl.UserRoleDaoImpl;
+import com.swapna.mytutor.dao.impl.UserRoleDaoQueryBased;
 
 public class UserRoleApplication {
 	public static void main(String args[])
 	{
 	
-	ApplicationContext context = new ClassPathXmlApplicationContext("userroledao.xml");
-	UserRoleDaoImpl daoImpl = context.getBean("userRole", UserRoleDaoImpl.class);
+	ApplicationContext context = new ClassPathXmlApplicationContext("persistencylayer.xml");
+	UserRoleDaoQueryBased daoImpl = context.getBean("userRole", UserRoleDaoQueryBased.class);
 	Scanner sc=new Scanner(System.in);
 	
 	
@@ -34,8 +35,8 @@ public class UserRoleApplication {
 	Integer count = daoImpl.save(userRole);
 	
 	
-	/*
-	//update..
+	
+	/*//update..
 	System.out.println("Enter RoleId..:");
 	int roleId=Integer.parseInt(sc.nextLine());
 	System.out.println("Enter Role Name  :");
@@ -45,8 +46,8 @@ public class UserRoleApplication {
 	userRole.setRoleId(roleId);
 	userRole.setRoleName(roleName);
 	
-	Integer count = daoImpl.update(userRole);
-	*/
+	Integer count = daoImpl.update(userRole);*/
+	
 	
 	
 	
@@ -57,14 +58,14 @@ public class UserRoleApplication {
 	UserRoleBO userRole=new UserRoleBO();
 	userRole.setRoleId(roleId);
 	
-	Integer count = daoImpl.deleteById(roleId);
-	*/
+	Integer count = daoImpl.deleteById(roleId);*/
 	
-	/*
-	//DeleteAll
+	
+	
+	/*//DeleteAll
 	Integer count = daoImpl.delete();
-*/
 
+*/
 	
 	
 	/*//FindAll.....
@@ -73,8 +74,8 @@ public class UserRoleApplication {
 	{
 		System.out.println(bo);
 	}
-	*/
 	
+*/	
 	
 	
 	/*//FindById..
