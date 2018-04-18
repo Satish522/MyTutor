@@ -1,5 +1,6 @@
-
-<%@ taglib prefix="spring" uri="/WEB-INF/spring.tld" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- <%@ taglib prefix="spring" uri="/WEB-INF/spring.tld" %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +10,17 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="/../resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href="<c:url value="/resources/bower_components/bootstrap/dist/css/bootstrap.min.css" />" rel="stylesheet">
+  
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/../resources/bower_components/font-awesome/css/font-awesome.min.css">
+  <link href="<c:url value="/resources/bower_components/font-awesome/css/font-awesome.min.css" />" rel="stylesheet">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/../resources/bower_components/Ionicons/css/ionicons.min.css">
+  <link href="<c:url value="/resources/bower_components/Ionicons/css/ionicons.min.css" />" rel="stylesheet">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/../resources/dist/css/AdminLTE.min.css">
+  <link href="<c:url value="/resources/dist/css/AdminLTE.min.css" />" rel="stylesheet">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="/../resources/dist/css/skins/_all-skins.min.css">
+  <link href="<c:url value="/resources/dist/css/skins/_all-skins.min.css" />" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -498,6 +500,50 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Blank Page
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Examples</a></li>
+        <li class="active">404 error</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="error-page">
+        <h2 class="headline text-yellow"> 404</h2>
+
+        <div class="error-content">
+          <h3><i class="fa fa-warning text-yellow"></i> Oops! Page not found.</h3>
+
+          <p>
+            We could not find the page you were looking for.
+            Meanwhile, you may <a href="../resources/index.html">return to dashboard</a> or try using the search form.
+          </p>
+
+          <form class="search-form">
+            <div class="input-group">
+              <input type="text" name="search" class="form-control" placeholder="Search">
+
+              <div class="input-group-btn">
+                <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.input-group -->
+          </form>
+        </div>
+        <!-- /.error-content -->
+      </div>
+      <!-- /.error-page -->
+    </section>
+    <!-- /.content -->
+  </div>
  
  
  
@@ -707,14 +753,15 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="/../resources/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<c:url value="/resources/bower_components/jquery/dist/jquery.min.js" />"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="/../resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<c:url value="/resources/bower_components/bootstrap/dist/js/bootstrap.min.js" />"></script>
 <!-- FastClick -->
-<script src="/../resources/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="<c:url value="/resources/bower_components/fastclick/lib/fastclick.js" />"></script>
 <!-- AdminLTE App -->
-<script src="/../resources/dist/js/adminlte.min.js"></script>
+<script src="<c:url value="/resources/dist/js/adminlte.min.js" />"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/../resources/dist/js/demo.js"></script>
+<script src="<c:url value="/resources/dist/js/demo.js" />"></script>
+
 </body>
 </html>
