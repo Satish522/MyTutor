@@ -16,6 +16,8 @@
   <link href="<c:url value="/resources/bower_components/font-awesome/css/font-awesome.min.css" />" rel="stylesheet">
   <!-- Ionicons -->
   <link href="<c:url value="/resources/bower_components/Ionicons/css/ionicons.min.css" />" rel="stylesheet">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<c:url value="/resources/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" />" >
   <!-- Theme style -->
   <link href="<c:url value="/resources/dist/css/AdminLTE.min.css" />" rel="stylesheet">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -504,13 +506,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+        User Role
+        <small>Master entry management can be done here like save , edit and delete</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
+        <li class="active">User Role</li>
       </ol>
     </section>
 
@@ -518,9 +519,9 @@
     <section class="content">
 
       <!-- Default box -->
-      <div class="box">
+      <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">Manage User Role</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -531,16 +532,83 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          Hey, Do you want save User Role !!!!
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="userrole">User Role</label>
+                  <input type="text" class="form-control" id="userrole" placeholder="User Role">
+                </div>
+                <div class="form-group">
+                  <label for="previlege">Previlege</label>
+                  <input type="text" class="form-control" id="previlege" placeholder="Previlege">
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          	
+          	
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-          Footer
+          Master Entry
         </div>
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
-
+       <div class="row">
+        <div class="col-xs-12">
+		<div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Table With Full Features</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Rendering engine</th>
+                  <th>Browser</th>
+                  <th>Platform(s)</th>
+                  <th>Engine version</th>
+                  <th>CSS grade</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 4.0
+                  </td>
+                  <td>Win 95+</td>
+                  <td> 4</td>
+                  <td>X</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Rendering engine</th>
+                  <th>Browser</th>
+                  <th>Platform(s)</th>
+                  <th>Engine version</th>
+                  <th>CSS grade</th>
+                </tr>
+                </tfoot>
+              </table>
+           
+		   </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
@@ -756,12 +824,27 @@
 <script src="<c:url value="/resources/bower_components/jquery/dist/jquery.min.js" />"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<c:url value="/resources/bower_components/bootstrap/dist/js/bootstrap.min.js" />"></script>
+<!-- DataTables -->
+<script src="<c:url value="/resources/bower_components/datatables.net/js/jquery.dataTables.min.js" />"></script>
+<script src="<c:url value="/resources/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"/>"></script>
 <!-- FastClick -->
 <script src="<c:url value="/resources/bower_components/fastclick/lib/fastclick.js" />"></script>
 <!-- AdminLTE App -->
 <script src="<c:url value="/resources/dist/js/adminlte.min.js" />"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<c:url value="/resources/dist/js/demo.js" />"></script>
-
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>
