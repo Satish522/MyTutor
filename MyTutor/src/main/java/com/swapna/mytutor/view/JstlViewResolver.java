@@ -11,13 +11,14 @@ import org.springframework.web.servlet.view.InternalResourceView;
 
 public class JstlViewResolver extends InternalResourceView  {
 
+	
 	@Override
 	protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
 		//dispatchPath obtained from prepareForRendering 
 		String dispatcherPath = prepareForRendering(request, response);
-				
+		System.out.println(dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1));
 		 // set original view being asked for as a request parameter
 		 request.setAttribute("content", dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1));
 		 
