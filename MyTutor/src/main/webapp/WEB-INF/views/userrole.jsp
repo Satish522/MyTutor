@@ -99,31 +99,28 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>User Role Id</th>
+                  <th>User Role</th>
+                  <th>Privileges</th>
+                  <th>Action</th>
+                  
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
+                  <td>2</td>
+                  <td>Admin</td>
+                  <td>Audit,Logs,Manage/Block user</td>
+                  <td>Edit|Delete</td>
+                   
                 </tr>
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                   <th>User Role Id</th>
+                  <th>User Role</th>
+                  <th>Privileges</th>
+                  <th>Action</th>
                 </tr>
                 </tfoot>
               </table>

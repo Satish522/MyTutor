@@ -18,13 +18,22 @@ public class JstlViewResolver extends InternalResourceView  {
 		
 		//dispatchPath obtained from prepareForRendering 
 		String dispatcherPath = prepareForRendering(request, response);
+		
+		String page=dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1);
 		System.out.println(dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1));
-		 // set original view being asked for as a request parameter
-		 request.setAttribute("content", dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1));
+		// set original view being asked for as a request parameter
+		request.setAttribute("content", dispatcherPath.substring(dispatcherPath.lastIndexOf("/") + 1));
 		 
 		// force everything to be template.jsp
-		 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/views/main.jsp");
-		 requestDispatcher.include(request, response);
+		RequestDispatcher requestDispatcher =null;
+		
+		if(page.equals("login.jsp") || page.equals("lockscreen.jsp") || page.equals("register.jsp") || page.equals("forgotpassword.jsp")) {
+			requestDispatcher=request.getRequestDispatcher("/WEB-INF/views/home.jsp");
+		}else {
+			requestDispatcher=request.getRequestDispatcher("/WEB-INF/views/main.jsp");
+		}
+				
+		requestDispatcher.include(request, response);
 		//super.renderMergedOutputModel(model, request, response);
 	}
 
