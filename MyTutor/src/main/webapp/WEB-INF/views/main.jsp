@@ -43,8 +43,6 @@
   <script src="<c:url value="/resources/dist/js/adminlte.min.js" />"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<c:url value="/resources/dist/js/demo.js" />"></script>
-	  
-  
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -639,7 +637,6 @@
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
-
       </div>
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
@@ -722,7 +719,5 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-
 </body>
 </html>
