@@ -5,17 +5,16 @@
 <title>My Tutor | Dashboard</title>
 <!-- Date Picker -->
 <link rel="stylesheet"
-	href="/resources/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+	href="<c:url value="/resources/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />">
 <!-- Daterange picker -->
-<link rel="stylesheet"
-	href="/resources/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="<c:url value="/resources/bower_components/bootstrap-daterangepicker/daterangepicker.css" />">
 	<!-- daterangepicker -->
-<script src="/resources/bower_components/moment/min/moment.min.js"></script>
+<script src="<c:url value="/resources/bower_components/moment/min/moment.min.js"/>"></script>
 <script
-	src="/resources/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	src="<c:url value="/resources/bower_components/bootstrap-daterangepicker/daterangepicker.js" />"></script>
 <!-- datepicker -->
 <script
-	src="/resources/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+	src="<c:url value="/resources/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />"></script>
 <!-- SlimScroll -->
 <script
 	src="<c:url value="/resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />"></script>
@@ -36,7 +35,7 @@
 					Dashboard <small>Control panel</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					<li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Home</a></li>
 					<li class="active">Dashboard</li>
 				</ol>
 			</section>

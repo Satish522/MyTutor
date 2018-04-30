@@ -128,9 +128,7 @@ public class ClassesForTrainingDaoImpl implements ClassesForTrainingDAO{
 		
 	@Override
 	public ClassesForTrainingBo findById(int id) {
-		
 		return jdbcTemplate.queryForObject(SQL_FIND_BY_ID, new Object[] {id}, new FindByIDRowMapper()); 
-		
 	}
 	
 	class FindByIDRowMapper implements RowMapper
