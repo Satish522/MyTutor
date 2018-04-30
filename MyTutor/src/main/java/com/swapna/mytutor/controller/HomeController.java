@@ -51,4 +51,18 @@ public class HomeController {
 		
 		return page;
 	}
+	
+	@RequestMapping(value = "/{page}", method = RequestMethod.POST)
+	public String userRole(@PathVariable() String page) {
+		//logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("forwarding to "+page);
+		Date date = new Date();
+		//DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		//String formattedDate = dateFormat.format(date);
+		
+		//model.addAttribute("serverTime", formattedDate );
+		
+		return page;
+	}
 }

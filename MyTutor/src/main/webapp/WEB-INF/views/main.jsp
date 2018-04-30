@@ -49,7 +49,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="/resources/index2.html" class="logo">
+    <a href="dashboard.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>MT</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -294,10 +294,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="profile.html" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="login.html" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

@@ -3,10 +3,10 @@
 <html>
 <head>
 <title>My Tutor | Log in</title>
- <!-- iCheck -->
-  <link rel="stylesheet" href="<c:url value="/resources/plugins/iCheck/square/blue.css"/>">
-   <!-- iCheck -->
-  <script src="<c:url value="/resources/plugins/iCheck/icheck.min.js" />"></script>
+	<!-- iCheck -->
+	<link rel="stylesheet" href="<c:url value="/resources/plugins/iCheck/square/blue.css"/>">
+	<!-- iCheck -->
+	<script src="<c:url value="/resources/plugins/iCheck/icheck.min.js" />"></script>
 	<script>
 	  $(function () {
 	    $('input').iCheck({
@@ -20,13 +20,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index2.html"><b>My Tutor</b></a>
+    <a href="login"><b>My Tutor</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="blank.html" method="post">
+    <form action="dashboard.html" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -50,7 +50,6 @@
         <!-- /.col -->
       </div>
     </form>
-
     <div class="social-auth-links text-center">
       <p>- OR -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
@@ -59,15 +58,11 @@
         Google+</a>
     </div>
     <!-- /.social-auth-links -->
-
-    <a href="#">I forgot my password</a><br>
+    <a href="forgotpassword.html">I forgot my password</a><br>
     <a href="register.html" class="text-center">Register a new membership</a>
-
   </div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-
- 
 </body>
 </html>
