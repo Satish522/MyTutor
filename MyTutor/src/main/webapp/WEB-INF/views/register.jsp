@@ -1,4 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,21 +28,21 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
 
-    <form action="login.html" method="post">
+    <form:form action="${pageContext.request.contextPath}/home/signup"   modelAttribute="register" method="POST">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name">
+        <form:input path="fullName" cssClass="form-control" />
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <form:input path="emailId" cssClass="form-control" />
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <form:input path="password" cssClass="form-control" />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password">
+        <form:input path="confirmPassword" cssClass="form-control"/>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">
@@ -53,11 +55,12 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
+          <form:button value="Registration"></form:button>
           <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    </form:form>
 
     <div class="social-auth-links text-center">
       <p>- OR -</p>

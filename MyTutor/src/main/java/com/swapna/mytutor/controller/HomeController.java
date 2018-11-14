@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import src.swapna.mytutor.pojo.Login;
+
 /**
  * Handles requests for the application home page.
  */
@@ -35,10 +37,12 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
+		model.addAttribute("login", new Login());
+		
 		return "login";
 	}
 	
-	@RequestMapping(value = "/{page}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{page}" , method={RequestMethod.GET})
 	public String userRole(Locale locale,@PathVariable() String page) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		logger.info("forwarding to "+page);
@@ -52,7 +56,7 @@ public class HomeController {
 		return page;
 	}
 	
-	@RequestMapping(value = "/{page}", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/{page}", method = RequestMethod.POST)
 	public String userRole(@PathVariable() String page) {
 		//logger.info("Welcome home! The client locale is {}.", locale);
 		logger.info("forwarding to "+page);
@@ -64,5 +68,5 @@ public class HomeController {
 		//model.addAttribute("serverTime", formattedDate );
 		
 		return page;
-	}
+	}*/
 }

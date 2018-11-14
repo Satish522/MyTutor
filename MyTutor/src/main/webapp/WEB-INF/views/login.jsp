@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,13 +27,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="dashboard.html" method="post">
+    <form:form action="${pageContext.request.contextPath}/login/dashboard.html" modelAttribute="login" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <form:input path="email" cssClass="form-control" placeholder="Email"/>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <form:password path="password" cssClass="form-control" placeholder="Password"/>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -49,7 +50,7 @@
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    </form:form>
     <div class="social-auth-links text-center">
       <p>- OR -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
@@ -59,7 +60,7 @@
     </div>
     <!-- /.social-auth-links -->
     <a href="forgotpassword.html">I forgot my password</a><br>
-    <a href="register.html" class="text-center">Register a new membership</a>
+    <a href="home/register.html" class="text-center">Register a new membership</a>
   </div>
   <!-- /.login-box-body -->
 </div>

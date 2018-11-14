@@ -103,7 +103,6 @@
                   <th>User Role</th>
                   <th>Privileges</th>
                   <th>Action</th>
-                  
                 </tr>
                 </thead>
                 <tbody>
@@ -112,12 +111,11 @@
                   <td>Admin</td>
                   <td>Audit,Logs,Manage/Block user</td>
                   <td>Edit|Delete</td>
-                   
                 </tr>
                 </tbody>
                 <tfoot>
                 <tr>
-                   <th>User Role Id</th>
+                  <th>User Role Id</th>
                   <th>User Role</th>
                   <th>Privileges</th>
                   <th>Action</th>
@@ -140,8 +138,5 @@
  
  </div>
  <!-- ./wrapper -->
- 
- 
-
 </body>
 </html>

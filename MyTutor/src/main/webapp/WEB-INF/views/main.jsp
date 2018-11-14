@@ -346,15 +346,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="userrole.html"><i class="fa fa-circle-o"></i> User Role</a></li>
-            <li><a href="${pageContext.request.contextPath}/coachingtype.html"><i class="fa fa-circle-o"></i> Coaching Type</a></li>
-            <li><a href="${pageContext.request.contextPath}/pattern.html"><i class="fa fa-circle-o"></i> Pattern Manage</a></li>
-            <li><a href="${pageContext.request.contextPath}/classes.html"><i class="fa fa-circle-o"></i> Classes Manage</a></li>
-            <li><a href="${pageContext.request.contextPath}/subject.html"><i class="fa fa-circle-o"></i> Subject Manage</a></li>
+            <li class="active"><a href="${pageContext.request.contextPath}/master/userrole.html"><i class="fa fa-circle-o"></i> User Role</a></li>
+            <li><a href="${pageContext.request.contextPath}/master/coachingtype.html"><i class="fa fa-circle-o"></i> Coaching Type</a></li>
+            <li><a href="${pageContext.request.contextPath}/master/pattern.html"><i class="fa fa-circle-o"></i> Pattern Manage</a></li>
+            <li><a href="${pageContext.request.contextPath}/master/classes.html"><i class="fa fa-circle-o"></i> Classes Manage</a></li>
+            <li><a href="${pageContext.request.contextPath}/master/subject.html"><i class="fa fa-circle-o"></i> Subject Manage</a></li>
           </ul>
         </li>
         <li>
-          <a href="mailbox.html">
+          <a href="${pageContext.request.contextPath}/master/mailbox.html">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
