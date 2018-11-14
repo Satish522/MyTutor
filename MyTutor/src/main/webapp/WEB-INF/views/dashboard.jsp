@@ -241,28 +241,28 @@
 							<!-- /.box-header -->
 							<div class="box-body no-padding">
 								<ul class="users-list clearfix">
-									<li><img src="resources/dist/img/user1-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Alexander
 											Pierce</a> <span class="users-list-date">Today</span></li>
-									<li><img src="resources/dist/img/user8-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user8-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Norman</a>
 										<span class="users-list-date">Yesterday</span></li>
-									<li><img src="resources/dist/img/user7-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user7-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Jane</a>
 										<span class="users-list-date">12 Jan</span></li>
-									<li><img src="resources/dist/img/user6-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user6-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">John</a>
 										<span class="users-list-date">12 Jan</span></li>
-									<li><img src="resources/dist/img/user2-160x160.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user2-160x160.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Alexander</a>
 										<span class="users-list-date">13 Jan</span></li>
-									<li><img src="resources/dist/img/user5-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user5-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Sarah</a>
 										<span class="users-list-date">14 Jan</span></li>
-									<li><img src="resources/dist/img/user4-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user4-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Nora</a>
 										<span class="users-list-date">15 Jan</span></li>
-									<li><img src="resources/dist/img/user3-128x128.jpg"
+									<li><img src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg"
 										alt="User Image"> <a class="users-list-name" href="#">Nadia</a>
 										<span class="users-list-date">15 Jan</span></li>
 								</ul>
@@ -313,7 +313,7 @@
 										</div>
 										<!-- /.direct-chat-info -->
 										<img class="direct-chat-img"
-											src="resources/dist/img/user1-128x128.jpg"
+											src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg"
 											alt="message user image">
 										<!-- /.direct-chat-img -->
 										<div class="direct-chat-text">Is this template really
@@ -331,7 +331,7 @@
 										</div>
 										<!-- /.direct-chat-info -->
 										<img class="direct-chat-img"
-											src="resources/dist/img/user3-128x128.jpg"
+											src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg"
 											alt="message user image">
 										<!-- /.direct-chat-img -->
 										<div class="direct-chat-text">You better believe it!</div>
@@ -348,7 +348,7 @@
 										</div>
 										<!-- /.direct-chat-info -->
 										<img class="direct-chat-img"
-											src="resources/dist/img/user1-128x128.jpg"
+											src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg"
 											alt="message user image">
 										<!-- /.direct-chat-img -->
 										<div class="direct-chat-text">Working with AdminLTE on a
@@ -366,7 +366,7 @@
 										</div>
 										<!-- /.direct-chat-info -->
 										<img class="direct-chat-img"
-											src="resources/dist/img/user3-128x128.jpg"
+											src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg"
 											alt="message user image">
 										<!-- /.direct-chat-img -->
 										<div class="direct-chat-text">I would love to.</div>
@@ -381,7 +381,7 @@
 								<div class="direct-chat-contacts">
 									<ul class="contacts-list">
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user1-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> Count Dracula <small
@@ -392,7 +392,7 @@
 										</a></li>
 										<!-- End Contact Item -->
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user7-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user7-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> Sarah Doe <small
@@ -403,7 +403,7 @@
 										</a></li>
 										<!-- End Contact Item -->
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user3-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> Nadia Jolie <small
@@ -414,7 +414,7 @@
 										</a></li>
 										<!-- End Contact Item -->
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user5-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user5-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> Nora S. Vans <small
@@ -425,7 +425,7 @@
 										</a></li>
 										<!-- End Contact Item -->
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user6-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user6-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> John K. <small
@@ -436,7 +436,7 @@
 										</a></li>
 										<!-- End Contact Item -->
 										<li><a href="#"> <img class="contacts-list-img"
-												src="resources/dist/img/user8-128x128.jpg" alt="User Image">
+												src="${pageContext.request.contextPath}/resources/dist/img/user8-128x128.jpg" alt="User Image">
 
 												<div class="contacts-list-info">
 													<span class="contacts-list-name"> Kenneth M. <small
