@@ -27,7 +27,7 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/dashboard" , method = RequestMethod.POST)
+	@RequestMapping(value = "/dashboard" , method = {RequestMethod.GET, RequestMethod.POST})
 	public String showLogin(@ModelAttribute("login") Login login , ModelMap model) {
 		//logger.info("Welcome home! The client locale is {}.", locale);
 		//ModelAndView model=new ModelAndView("register","register",new Register());

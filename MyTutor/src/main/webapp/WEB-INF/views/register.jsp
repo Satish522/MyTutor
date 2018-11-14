@@ -30,19 +30,19 @@
 
     <form:form action="${pageContext.request.contextPath}/home/signup"   modelAttribute="register" method="POST">
       <div class="form-group has-feedback">
-        <form:input path="fullName" cssClass="form-control" />
+        <form:input path="fullName" cssClass="form-control" placeholder="Full Name" />
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <form:input path="emailId" cssClass="form-control" />
+        <form:input path="emailId" cssClass="form-control" placeholder="Email Id"/>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <form:input path="password" cssClass="form-control" />
+        <form:input path="password" cssClass="form-control" placeholder="Password" />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <form:input path="confirmPassword" cssClass="form-control"/>
+        <form:input path="confirmPassword" cssClass="form-control" placeholder="Confirm Password"/>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">

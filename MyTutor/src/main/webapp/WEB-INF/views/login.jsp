@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="login"><b>My Tutor</b></a>
+    <a href="${pageContext.request.contextPath}/login"><b>My Tutor</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
