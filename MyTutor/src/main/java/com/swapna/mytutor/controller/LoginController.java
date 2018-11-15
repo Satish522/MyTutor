@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import src.swapna.mytutor.pojo.Login;
-import src.swapna.mytutor.pojo.Register;
+
 
 @Controller
 @RequestMapping(value="/login")

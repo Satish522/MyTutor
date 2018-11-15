@@ -70,7 +70,6 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-         
           <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
         </div>
         <!-- /.col -->
@@ -85,7 +84,7 @@
         Google+</a>
     </div>
 
-    <a href="login.html" class="text-center">I already have a membership</a>
+    <a href="${pageContext.request.contextPath}/login.html" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
 </div>

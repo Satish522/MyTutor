@@ -8,8 +8,5 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<import resource="classpath:persistencylayer.xml"/>
 	<context:component-scan base-package="com.swapna.mytutor.dao.impl,com.swapna.mytutor.service,com.swapna.mytutor.dao.impl,com.swapna.mytutor.dao.impl" />
-	
-	
-	
 
 </beans>

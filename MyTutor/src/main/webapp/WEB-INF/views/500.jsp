@@ -14,7 +14,7 @@
         500 Error Page
       </h1>
       <ol class="breadcrumb">
-        <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="${pageContext.request.contextPath}/login/dashboard.html"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Examples</a></li>
         <li class="active">500 error</li>
       </ol>
@@ -31,7 +31,7 @@
 
           <p>
             We will work on fixing that right away.
-            Meanwhile, you may <a href="dashboard.html">return to dashboard</a> or try using the search form.
+            Meanwhile, you may <a href="${pageContext.request.contextPath}/login/dashboard.html">return to dashboard</a> or try using the search form.
           </p>
 
           <form class="search-form">

@@ -42,6 +42,13 @@ public class RegisterController {
 		return "register";
 	}
 	
+	@RequestMapping(value = "/profile" , method = RequestMethod.GET)
+	public String userProfile(Model model) {
+		logger.info("Welcome home! The client locale is {}.");
+		
+		return "profile";
+	}
+	
 	@RequestMapping(value="/signup" , method=RequestMethod.POST)
 	public String registration(@ModelAttribute("register") Register register,BindingResult result, ModelMap model){
 		
