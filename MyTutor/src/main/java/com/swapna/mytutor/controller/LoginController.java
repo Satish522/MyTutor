@@ -32,7 +32,7 @@ public class LoginController {
 		//logger.info("Welcome home! The client locale is {}.", locale);
 		//ModelAndView model=new ModelAndView("register","register",new Register());
 		 
-		//System.out.println("View name is "+model.getView());
+		System.out.println("View name is "+model);
 		
 		return "dashboard";
 	}

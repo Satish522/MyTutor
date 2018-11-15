@@ -1,7 +1,6 @@
-package src.swapna.mytutor.pojo;
+package com.swapna.mytutor.dto;
 
-public class Register {
-
+public class RegisterDto {
 	String fullName;
 	String emailId;
 	String password;
@@ -52,6 +51,6 @@ public class Register {
 	}
 
 
-	
+
 
 }

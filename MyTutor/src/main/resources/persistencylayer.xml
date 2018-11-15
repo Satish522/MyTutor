@@ -17,7 +17,7 @@
 </bean>
 
 
-<bean id="classesForTrainingDaoImpl" class="com.swapna.mytutor.dao.impl.ClassesForTrainingDaoImpl">
+<!-- <bean id="classesForTrainingDaoImpl" class="com.swapna.mytutor.dao.impl.ClassesForTrainingDaoImpl">
 	<constructor-arg ref="jdbcTemplet"></constructor-arg>
 </bean>
 
@@ -35,6 +35,6 @@
 
 <bean id="userRole" class="com.swapna.mytutor.dao.impl.UserRoleDaoQueryBased">
 	<constructor-arg ref="jdbcTemplet"></constructor-arg>
-</bean>
+</bean> -->
 
 </beans>

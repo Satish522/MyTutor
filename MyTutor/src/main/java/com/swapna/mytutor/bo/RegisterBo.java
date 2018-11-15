@@ -1,12 +1,10 @@
-package src.swapna.mytutor.pojo;
+package com.swapna.mytutor.bo;
 
-public class Register {
-
+public class RegisterBo {
+	
 	String fullName;
 	String emailId;
 	String password;
-	String confirmPassword;
-	String userType;
 	String userId;
 	
 	public String getUserId() {
@@ -14,12 +12,6 @@ public class Register {
 	}
 	public void setUserId(String userId) {
 		this.userId = userId;
-	}
-	public String getUserType() {
-		return userType;
-	}
-	public void setUserType(String userType) {
-		this.userType = userType;
 	}
 	public String getFullName() {
 		return fullName;
@@ -39,19 +31,10 @@ public class Register {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
 	@Override
 	public String toString() {
-		return "RegisterDto [fullName=" + fullName + ", emailId=" + emailId + ", password=" + password
-				+ ", confirmPassword=" + confirmPassword + ", userType=" + userType + ", userId=" + userId + "]";
+		return "RegisterDto [fullName=" + fullName + ", emailId=" + emailId
+				+ ", password=" + password + ", userId=" + userId + "]";
 	}
-
-
 	
-
 }

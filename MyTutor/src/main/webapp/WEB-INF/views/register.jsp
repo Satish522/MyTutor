@@ -38,13 +38,28 @@
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <form:input path="password" cssClass="form-control" placeholder="Password" />
+        <form:password path="password" cssClass="form-control" placeholder="Password" />
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <form:input path="confirmPassword" cssClass="form-control" placeholder="Confirm Password"/>
+        <form:password path="confirmPassword" cssClass="form-control" placeholder="Confirm Password"/>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
+      <div class="form-group has-feedback">
+        <form:radiobutton path="userType" cssClass="form-control" value="T" label="Teacher" />
+        <form:radiobutton path="userType" cssClass="form-control" value="S" label="Student" />
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+      </div>
+      
+      
+      
+      
+      
+     
+      
+    
+      
+      
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -55,8 +70,8 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <form:button value="Registration"></form:button>
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+         
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
         </div>
         <!-- /.col -->
       </div>
