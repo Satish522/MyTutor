@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.swapna.mytutor.dto.RegisterDto;
+import com.swapna.mytutor.pojo.Register;
 import com.swapna.mytutor.service.RegisterService;
-
-import src.swapna.mytutor.pojo.Register;
-import src.swapna.mytutor.utils.AppUtils;
-import src.swapna.mytutor.utils.MailClass;
+import com.swapna.mytutor.utils.AppUtils;
+import com.swapna.mytutor.utils.MailClass;
 
 @Controller
 @RequestMapping(value = "/home")

@@ -84,7 +84,7 @@
         Google+</a>
     </div>
 
-    <a href="${pageContext.request.contextPath}/login.html" class="text-center">I already have a membership</a>
+    <a href="${pageContext.request.contextPath}/login/signin.html" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
 </div>

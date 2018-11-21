@@ -1,4 +1,4 @@
-package src.swapna.mytutor.utils;
+package com.swapna.mytutor.utils;
 
 import java.util.Random;
 

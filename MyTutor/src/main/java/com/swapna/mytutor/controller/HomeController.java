@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import src.swapna.mytutor.pojo.Login;
+import com.swapna.mytutor.pojo.Login;
 
 /**
  * Handles requests for the application home page.

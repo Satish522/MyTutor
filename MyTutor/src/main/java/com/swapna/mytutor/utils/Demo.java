@@ -1,4 +1,4 @@
-package src.swapna.mytutor.utils;
+package com.swapna.mytutor.utils;
 
 public class Demo {
 	public static void main(String arg[]) {

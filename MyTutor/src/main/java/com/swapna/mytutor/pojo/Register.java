@@ -1,4 +1,4 @@
-package src.swapna.mytutor.pojo;
+package com.swapna.mytutor.pojo;
 
 public class Register {
 
