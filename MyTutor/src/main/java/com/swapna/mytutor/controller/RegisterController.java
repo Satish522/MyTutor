@@ -18,27 +18,32 @@ import com.swapna.mytutor.service.RegisterService;
 
 import src.swapna.mytutor.pojo.Register;
 import src.swapna.mytutor.utils.AppUtils;
-
+import src.swapna.mytutor.utils.MailClass;
 
 @Controller
-@RequestMapping(value="/home")
+@RequestMapping(value = "/home")
 public class RegisterController {
-	
+
 	@Autowired
 	RegisterService registerService;
-	
-	private static final Logger logger = LoggerFactory.getLogger(RegisterController.class);
 
-	@RequestMapping(value = "/register" , method = RequestMethod.GET)
+	@Autowired
+	MailClass mailClass;
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(RegisterController.class);
+
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String userRegister(Model model) {
-		//logger.info("Welcome home! The client locale is {}.", locale);
-		//ModelAndView model=new ModelAndView("register","register",new Register());
-		 
-		Register register=new Register();
-		
+		// logger.info("Welcome home! The client locale is {}.", locale);
+		// ModelAndView model=new ModelAndView("register","register",new
+		// Register());
+
+		Register register = new Register();
+
 		model.addAttribute("register", register);
-		//System.out.println("View name is "+model.getView());
-		
+		// System.out.println("View name is "+model.getView());
+
 		return "register";
 	}
 	
@@ -48,40 +53,59 @@ public class RegisterController {
 		
 		return "profile";
 	}
-	
-	@RequestMapping(value="/signup" , method=RequestMethod.POST)
-	public String registration(@ModelAttribute("register") Register register,BindingResult result, ModelMap model){
-		
-		
-		String userId="";
-		int flag=0;
-		if(register.getPassword().equals(register.getConfirmPassword())){
-			String[] name=register.getFullName().split(" ");
-			 userId=name[0]+AppUtils.getRandomNumber();
-			
-			 logger.info("Registering from controller to service");
-			RegisterDto registerDto = new RegisterDto();
-			registerDto.setFullName(register.getFullName());
-			registerDto.setEmailId(register.getEmailId());
-			registerDto.setPassword(register.getPassword());
-			registerDto.setUserId(userId);
-			registerDto.setUserType(register.getUserType());
-			
 
-			flag = registerService.register(registerDto);
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String registration(@ModelAttribute("register") Register register,
+			BindingResult result, ModelMap model) {
+
+		int flag = 0;
+		if (!register.getPassword().equals(register.getConfirmPassword())) {
+			logger.error("Password not matching.....");
+			return "error"; // We should throw some exception and it has to
+							// handle in controller using ControllerAdvice
+			// throw new Exception("Password is not matching ");
+
 		}
-		if(flag > 0) {
+		String[] name = register.getFullName().split(" ");
+		String userId = name[0] + AppUtils.getRandomNumber();
+
+		logger.info("Registering from controller to service");
+		final RegisterDto registerDto = new RegisterDto();
+		registerDto.setFullName(register.getFullName());
+		registerDto.setEmailId(register.getEmailId());
+		registerDto.setPassword(register.getPassword());
+		registerDto.setUserId(userId);
+		registerDto.setUserType(register.getUserType());
+
+		flag = registerService.register(registerDto);
+
+		if (flag > 0) {
 			logger.info("Sucessfully registered..");
-		}else {
+
+			new Thread(new Runnable() {
+
+				@Override
+				public void run() {
+
+					StringBuffer sb = new StringBuffer();
+					sb.append("Hi Dev,").append(
+							"Your Registration sucessfull with userId: "
+									+ registerDto.getUserId());
+					mailClass.sendMail("swapnarani.senapati55@gmail.com",
+							"SignUp sucessfull", sb.toString());
+
+				}
+
+			}).start();
+
+		} else {
 			logger.error("Something wrong in registration..");
 		}
-	
-		System.out.println("Registration ");
-		
-		return "redirect:/login";
-		
 
+		System.out.println("Registration ");
+
+		return "redirect:/login";
 
 	}
-	
+
 }

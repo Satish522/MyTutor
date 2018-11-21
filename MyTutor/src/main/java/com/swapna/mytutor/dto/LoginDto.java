@@ -1,11 +1,10 @@
-package src.swapna.mytutor.pojo;
+package com.swapna.mytutor.dto;
 
-public class Login {
-
+public class LoginDto {
 	private String email;
 	private String password;
 	private String userId;
-	
+
 	public String getUserId() {
 		return userId;
 	}
@@ -28,7 +27,6 @@ public class Login {
 	public String toString() {
 		return "Login [email=" + email + ", password=" + password + "]";
 	}
-	
 	
 	
 }

@@ -1,10 +1,10 @@
-package src.swapna.mytutor.pojo;
+package com.swapna.mytutor.bo;
 
-public class Login {
-
+public class LoginBo {
 	private String email;
 	private String password;
 	private String userId;
+
 	
 	public String getUserId() {
 		return userId;
@@ -26,9 +26,9 @@ public class Login {
 	}
 	@Override
 	public String toString() {
-		return "Login [email=" + email + ", password=" + password + "]";
+		return "LoginBo [email=" + email + ", password=" + password
+				+ ", userId=" + userId + "]";
 	}
-	
 	
 	
 }

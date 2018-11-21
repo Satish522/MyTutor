@@ -23,6 +23,7 @@ public class RegisterDao {
 	
 	@Autowired
 	JdbcTemplate  jdbcTempate ;
+	
 	protected String SQL_INSERT="insert into user_credential(user_id,password,mail_id,entry_date) values(?,?,?,now())";
 
 		

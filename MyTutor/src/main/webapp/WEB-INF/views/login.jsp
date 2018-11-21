@@ -25,11 +25,11 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">${failureMsg}</p>
 
     <form:form action="${pageContext.request.contextPath}/login/dashboard.html" modelAttribute="login" method="post">
       <div class="form-group has-feedback">
-        <form:input path="email" cssClass="form-control" placeholder="Email"/>
+        <form:input path="userId" cssClass="form-control" placeholder="User ID"/>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
