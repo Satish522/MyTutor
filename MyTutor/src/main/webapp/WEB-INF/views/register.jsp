@@ -48,18 +48,9 @@
       <div class="form-group has-feedback">
         <form:radiobutton path="userType" cssClass="form-control" value="T" label="Teacher" />
         <form:radiobutton path="userType" cssClass="form-control" value="S" label="Student" />
-        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        
       </div>
-      
-      
-      
-      
-      
-     
-      
-    
-      
-      
+        
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -84,7 +75,7 @@
         Google+</a>
     </div>
 
-    <a href="${pageContext.request.contextPath}/login/signin.html" class="text-center">I already have a membership</a>
+    <a href="${pageContext.request.contextPath}/login.html" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
 </div>

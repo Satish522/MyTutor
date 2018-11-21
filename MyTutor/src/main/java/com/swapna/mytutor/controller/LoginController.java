@@ -23,22 +23,6 @@ public class LoginController {
 	LoginService loginService;
 
 	@RequestMapping(value = { "/", "/signout", "/login" }, method = RequestMethod.GET)
-	public String showLogin(@RequestParam("attempt") String attempt ,Model model) {
-		// logger.info("Welcome home! The client locale is {}.", locale);
-		// ModelAndView model=new ModelAndView("register","register",new
-		// Register());
-
-		Login login = new Login();
-
-		model.addAttribute("login", login);
-		if(attempt != null && attempt.equals("fail")){
-			model.addAttribute("failureMsg", "Attempted password is wrong.");
-		}
-		// System.out.println("View name is "+model.getView());
-
-		return "login";
-	}
-	@RequestMapping(value = { "/", "/signin" }, method = RequestMethod.GET)
 	public String showLogin(Model model) {
 		// logger.info("Welcome home! The client locale is {}.", locale);
 		// ModelAndView model=new ModelAndView("register","register",new
@@ -47,7 +31,23 @@ public class LoginController {
 		Login login = new Login();
 
 		model.addAttribute("login", login);
-		 
+		
+		// System.out.println("View name is "+model.getView());
+
+		return "login";
+	}
+	@RequestMapping(value = { "/", "/attempt" }, method = RequestMethod.GET)
+	public String showLogin(@RequestParam("status") String status,Model model) {
+		// logger.info("Welcome home! The client locale is {}.", locale);
+		// ModelAndView model=new ModelAndView("register","register",new
+		// Register());
+
+		Login login = new Login();
+
+		model.addAttribute("login", login);
+		if(status != null && status.equals("fail")){
+			model.addAttribute("failureMsg", "Attempted password is wrong.");
+		}
 		// System.out.println("View name is "+model.getView());
 
 		return "login";
@@ -69,7 +69,7 @@ public class LoginController {
 		if (status != null && status.equals("success")) {
 			return "dashboard";
 		} else if (status != null && status.equals("fail")) {
-			return "redirect:/login?attempt=fail";
+			return "redirect:/attempt?status=fail";
 		} else {
 			return "redirect:/login";
 		}

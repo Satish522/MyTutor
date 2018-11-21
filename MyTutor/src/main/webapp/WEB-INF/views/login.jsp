@@ -59,8 +59,8 @@
         Google+</a>
     </div>
     <!-- /.social-auth-links -->
-    <a href="forgotpassword.html">I forgot my password</a><br>
-    <a href="home/register.html" class="text-center">Register a new membership</a>
+    <a href="${pageContext.request.contextPath}/login/forgotpassword.html">I forgot my password</a><br>
+    <a href="${pageContext.request.contextPath}/home/register.html" class="text-center">Register a new membership</a>
   </div>
   <!-- /.login-box-body -->
 </div>
