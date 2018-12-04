@@ -1,4 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +14,10 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Forgot Password</p>
-
-    <form action="forgotpassword.html" method="post">
+	<p class="login-box-msg">${msg}</p>
+    <form:form action="${pageContext.request.contextPath}/login/forgotpassword"  modelAttribute="forgotpsw" method="POST">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <form:input path="email" cssClass="form-control" placeholder="Email" />
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
        
@@ -30,7 +32,7 @@
           <a href="login.html"><button type="button" class="btn btn-primary btn-block btn-flat">Login</button></a>
         </div>
       </div>
-    </form>
+    </form:form>
   </div>
   <!-- /.login-box-body -->
 </div>

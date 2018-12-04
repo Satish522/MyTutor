@@ -31,7 +31,7 @@ public class JstlViewResolver extends InternalResourceView  {
 		// force everything to be template.jsp
 		RequestDispatcher requestDispatcher =null;
 		
-		if(page.equals("login.jsp") || page.equals("lockscreen.jsp") || page.equals("register.jsp") || page.equals("forgotpassword.jsp")) {
+		if(page.equals("login.jsp") || page.equals("lockscreen.jsp") || page.equals("register.jsp") || page.equals("forgotpassword.jsp") || page.equals("resetpassword.jsp") ) {
 			logger.info("Home Page including "+page+" page");
 			
 			requestDispatcher=request.getRequestDispatcher("/WEB-INF/views/home.jsp");
